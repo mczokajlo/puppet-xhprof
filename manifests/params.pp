@@ -1,0 +1,41 @@
+class xhprof::params {
+    $xh_xhprof_config_file = '/etc/php5/mods-available/xhprof.ini'
+    $xh_xhprof_config      = {
+        extension           => 'xhprof.so',
+        'xhprof.output_dir' => '/tmp',
+        auto_prepend_file   => '/var/www/xhprof/external/header.php'
+    }
+    $xh_php_service        = 'php5-fpm'
+    $xh_php_package        = 'php5-fpm'
+    $xh_php_config_file    = '/etc/php5/fpm/php.ini'
+    $xh_php_services       = ['fpm', 'cli']
+    $xh_git                = 'https://github.com/PracaPl/xhprof.git'
+    $xh_path               = '/var/www'
+    $xh_dbtype             = 'mysqli'
+    $xh_dbhost             = 'localhost'
+    $xh_dbuser             = 'xhprof'
+    $xh_dbpass             = 'xhprof'
+    $xh_dbname             = 'xhprof'
+    $xh_dbadapter          = 'Mysqli'
+    $xh_servername         = 'myserver'
+    $xh_namespace          = 'myapp'
+    $xh_url                = 'http://url/xhprof_html'
+    $xh_dbprotocol         = 'unix'
+    $xh_dbsocket           = '/opt/local/var/run/mysql56/mysqld.sock'
+    $xh_serializer         = 'php'
+    $xh_dot_binary         = '/usr/bin/dot'
+    $xh_dot_tempdir        = '/tmp'
+    $xh_dot_errfile        = '/tmp/xh_dot.err'
+    $xh_thousandsSeparator = ','
+    $xh_decimalSeparator   = '.'
+    $xh_ignoreURLs         = ['login']
+    $xh_ignoreDomains      = []
+    $xh_exceptionURLs      = []
+    $xh_exceptionPostURLs  = []
+    $xh_cookieName         = '_profile'
+    $xh_display            = 'true'
+    $xh_doprofile          = 'true'
+    $xh_controlIPs         = ['127.0.0.1','::1',]
+    $xh_otherURLS          = []
+    $xh_ignoredFunctions   = []
+}
