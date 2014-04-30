@@ -20,7 +20,7 @@ class xhprof::params {
     $xh_dbcreate           = true
     $xh_dbcharset          = 'utf8'
     $xh_dbcollate          = 'utf8_general_ci'
-    $xh_dbgrant            = ['SELECT', 'UPDATE']
+    $xh_dbgrant            = ['SELECT', 'INSERT']
     $xh_dbsql              = '/etc/puppet/modules/xhprof/templates/xhprof.sql'
     $xh_dbenforce_sql      = false
     $xh_servername         = 'myserver'
