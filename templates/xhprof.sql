@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS `details`;
+DROP TABLE IF EXISTS `details`;
 CREATE TABLE IF NOT EXISTS `details` (
     `id` char(17) NOT NULL,
     `url` varchar(255) default NULL,
@@ -16,12 +16,12 @@ CREATE TABLE IF NOT EXISTS `details` (
     `ct` int(11) unsigned default NULL,
     `server_id` char(3) NOT NULL default 't11',
     `aggregateCalls_include` varchar(255) DEFAULT NULL,
-     PRIMARY KEY  (`id`),
-     KEY `url` (`url`),
-     KEY `c_url` (`c_url`),
-     KEY `cpu` (`cpu`),
-     KEY `ct` (`ct`),
-     KEY `wt` (`wt`),
-     KEY `pmu` (`pmu`),
-     KEY `timestamp` (`timestamp`)
- ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+    PRIMARY KEY  (`id`),
+    KEY `url` (`url`),
+    KEY `c_url` (`c_url`),
+    KEY `cpu` (`cpu`),
+    KEY `ct` (`ct`),
+    KEY `wt` (`wt`),
+    KEY `pmu` (`pmu`),
+    KEY `timestamp` (`timestamp`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;

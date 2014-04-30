@@ -13,6 +13,12 @@ class xhprof (
     $dbpass             = $xhprof::params::xh_dbpass,
     $dbname             = $xhprof::params::xh_dbname,
     $dbadapter          = $xhprof::params::xh_dbadapter,
+    $dbcreate           = $xhprof::params::xh_dbcreate,
+    $dbcharset          = $xhprof::params::xh_dbcharset,
+    $dbcollate          = $xhprof::params::xh_dbcollate,
+    $dbgrant            = $xhprof::params::xh_dbgrant,
+    $dbsql              = $xhprof::params::xh_dbsql,
+    $dbenforce_sql      = $xhprof::params::xh_dbenforce_sql,
     $servername         = $xhprof::params::xh_servername,
     $namespace          = $xhprof::params::xh_namespace,
     $url                = $xhprof::params::xh_url,
@@ -71,6 +77,21 @@ class xhprof (
         otherURLS          => $otherURLS,
         ignoredFunctions   => $ignoredFunctions,
         require            => Class['xhprof::gui']
+    }
+
+    if $dbcreate == true {
+        class { 'xhprof::db':
+            host        => $dbhost,
+            user        => $dbuser,
+            pass        => $dbpass,
+            name        => $dbname,
+            charset     => $dbcharset,
+            collate     => $dbcollate,
+            grant       => $dbgrant,
+            sql         => $dbsql,
+            enforce_sql => $dbenforce_sql,
+            require     => Class['xhprof::gui::config']
+        }
     }
 
     class { 'xhprof::package':

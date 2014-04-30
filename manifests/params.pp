@@ -17,6 +17,12 @@ class xhprof::params {
     $xh_dbpass             = 'xhprof'
     $xh_dbname             = 'xhprof'
     $xh_dbadapter          = 'Mysqli'
+    $xh_dbcreate           = true
+    $xh_dbcharset          = 'utf8'
+    $xh_dbcollate          = 'utf8_general_ci'
+    $xh_dbgrant            = ['SELECT', 'UPDATE']
+    $xh_dbsql              = '/etc/puppet/modules/xhprof/templates/xhprof.sql'
+    $xh_dbenforce_sql      = false
     $xh_servername         = 'myserver'
     $xh_namespace          = 'myapp'
     $xh_url                = 'http://url/xhprof_html'
